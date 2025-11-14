@@ -61,6 +61,12 @@ export default function Home() {
       <h2 style={{ marginTop: '20px' }}>Kiểm tra thông tin customer</h2>
       <Scanner
         onScan={handleScan}
+        components={{
+          onOff: true, // Show camera on/off button
+          torch: true, // Show torch/flashlight button (if supported)
+          zoom: true, // Show zoom control (if supported)
+          finder: true, // Show finder overlay
+        }}
         paused={isPaused}
       />
       <div style={{ padding: '20px', display: 'flex', flexDirection: 'column', alignSelf: 'flex-start', gap: '0' }}>
